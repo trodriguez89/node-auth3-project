@@ -8,13 +8,13 @@ module.exports = {
 }
 
 function add(user){
-    return db("user")
+    return db("users")
     .insert(user)
 };
 
 function find(department){
-    return db("user")
-    .where("department", department)
+    return db("users")
+    .where("department", "=", department)
     .select("id", "username", "department")
 };
 
